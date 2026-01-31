@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>العطلة الجميلة للسفر والسياحة | Beautiful Holiday</title>
+  
+  <!-- Styles and Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      scroll-behavior: smooth;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .hero-bg {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1774&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .banner-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .banner-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 bg-transparent py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center gap-4">
+  <div id="logo-icon">
+    <img src="1.png" alt="Logo" 
+         class="w-16 h-16">
+  </div>
+  <div class="hidden sm:block">
+    <h1 id="logo-text-primary" class="font-bold text-lg transition-colors text-white">
+      العطلة الجميلة
+    </h1>
+    <p id="logo-text-secondary" class="text-[10px] transition-colors text-white/80">
+      Beautiful Holiday Travel
+    </p>
+  </div>
+</div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:block">
+        <ul class="flex gap-8">
+          <li><a href="#home" class="nav-link font-semibold transition-all relative group text-white hover:text-orange-400">الرئيسية<span class="absolute bottom-[-4px] right-0 w-0 h-0.5 bg-orange-400 transition-all group-hover:w-full"></span></a></li>
+          <li><a href="#asia" class="nav-link font-semibold transition-all relative group text-white hover:text-orange-400">آسيا<span class="absolute bottom-[-4px] right-0 w-0 h-0.5 bg-orange-400 transition-all group-hover:w-full"></span></a></li>
+          <li><a href="#europe" class="nav-link font-semibold transition-all relative group text-white hover:text-orange-400">أوروبا<span class="absolute bottom-[-4px] right-0 w-0 h-0.5 bg-orange-400 transition-all group-hover:w-full"></span></a></li>
+          <li><a href="#america" class="nav-link font-semibold transition-all relative group text-white hover:text-orange-400">أمريكا<span class="absolute bottom-[-4px] right-0 w-0 h-0.5 bg-orange-400 transition-all group-hover:w-full"></span></a></li>
+          <li><a href="#popular" class="nav-link font-semibold transition-all relative group text-white hover:text-orange-400">الرائجة<span class="absolute bottom-[-4px] right-0 w-0 h-0.5 bg-orange-400 transition-all group-hover:w-full"></span></a></li>
+          <li><a href="#gallery" class="nav-link font-semibold transition-all relative group text-white hover:text-orange-400">المعرض<span class="absolute bottom-[-4px] right-0 w-0 h-0.5 bg-orange-400 transition-all group-hover:w-full"></span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl p-2 text-white">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-white shadow-2xl transition-all duration-300 overflow-hidden max-h-0">
+      <ul class="p-6 flex flex-col gap-4">
+        <li><a href="#home" class="mobile-nav-link text-slate-800 font-bold block py-2 hover:text-blue-600 border-b border-slate-100">الرئيسية</a></li>
+        <li><a href="#asia" class="mobile-nav-link text-slate-800 font-bold block py-2 hover:text-blue-600 border-b border-slate-100">آسيا</a></li>
+        <li><a href="#europe" class="mobile-nav-link text-slate-800 font-bold block py-2 hover:text-blue-600 border-b border-slate-100">أوروبا</a></li>
+        <li><a href="#america" class="mobile-nav-link text-slate-800 font-bold block py-2 hover:text-blue-600 border-b border-slate-100">أمريكا</a></li>
+        <li><a href="#popular" class="mobile-nav-link text-slate-800 font-bold block py-2 hover:text-blue-600 border-b border-slate-100">الرائجة</a></li>
+        <li><a href="#gallery" class="mobile-nav-link text-slate-800 font-bold block py-2 hover:text-blue-600 border-b border-slate-100">المعرض</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden hero-bg">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-orange-600/20 z-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+      <h1 class="text-4xl md:text-7xl font-extrabold text-white drop-shadow-2xl opacity-0 transition-all duration-1000 translate-y-10" id="hero-title">
+        اكتشف العالم مع <span class="text-orange-400">العطلة الجميلة</span>
+      </h1>
+      <p class="text-lg md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md opacity-0 transition-all duration-1000 delay-300 translate-y-10" id="hero-desc">
+        نقدم لك أفضل عروض السفر والسياحة إلى أهم الوجهات العالمية. استمتع بتجارب لا تنسى مع أفضل الأسعار وخدمة عملاء متميزة.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0 transition-all duration-1000 delay-500 translate-y-10" id="hero-btns">
+        <a href="#popular" class="px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold text-xl rounded-full transition-all hover:scale-105 shadow-xl">اكتشف الوجهات الرائجة</a>
+        <a href="#asia" class="px-10 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-xl rounded-full border border-white/30 transition-all hover:scale-105">استكشف القارات</a>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce text-2xl hidden md:block">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Destination Sections Container -->
+  <div id="destinations-container"></div>
+
+  <!-- Popular Section -->
+  <section id="popular" class="py-24 bg-gradient-to-br from-slate-100 to-slate-200">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="text-4xl md:text-5xl font-black text-blue-900">الوجهات الرائجة</h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">أكثر الوجهات طلباً وحجزاً لهذا الموسم</p>
+        <div class="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+      </div>
+      <div id="popular-grid" class="flex flex-col gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="text-4xl md:text-5xl font-black text-blue-900">معرض الصور</h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">لقطات من رحلات عملائنا حول العالم</p>
+        <div class="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+      </div>
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Modal -->
+  <div id="gallery-modal" class="fixed inset-0 z-[3000] bg-black/95 flex flex-col items-center justify-center p-6 hidden opacity-0 transition-opacity duration-300">
+    <div class="max-w-5xl w-full space-y-4 text-center">
+      <img id="modal-img" src="" alt="" class="max-h-[70vh] w-auto mx-auto rounded-2xl shadow-2xl border-4 border-white/10" />
+      <div class="text-white space-y-2">
+        <h3 id="modal-title" class="text-3xl font-bold"></h3>
+        <p id="modal-desc" class="text-slate-400"></p>
+      </div>
+      <button id="close-modal" class="mt-8 px-10 py-3 bg-orange-600 text-white font-bold rounded-full hover:bg-orange-700 transition-all flex items-center gap-2 mx-auto">
+        <i class="fas fa-times"></i> إغلاق
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white pt-20 pb-10">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div class="space-y-6">
+          <h2 class="text-2xl font-bold text-orange-400">العطلة الجميلة للسفر والسياحة</h2>
+          <p class="text-slate-400 leading-relaxed">نحن نقدم أفضل خدمات السفر والسياحة منذ عام 2005. نضمن لكم تجربة سفر استثنائية بأسعار تنافسية وخدمة عملاء متميزة على مدار الساعة.</p>
+          <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-all"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-400 transition-all"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink-600 transition-all"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-6 border-r-4 border-orange-500 pr-4">روابط سريعة</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-slate-400 hover:text-white transition-colors">الرئيسية</a></li>
+            <li><a href="#asia" class="text-slate-400 hover:text-white transition-colors">الدول الآسيوية</a></li>
+            <li><a href="#europe" class="text-slate-400 hover:text-white transition-colors">الدول الأوروبية</a></li>
+            <li><a href="#gallery" class="text-slate-400 hover:text-white transition-colors">معرض الصور</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-6 border-r-4 border-orange-500 pr-4">خدماتنا</h4>
+          <ul class="space-y-3">
+            <li class="text-slate-400">حجز تذاكر طيران</li>
+            <li class="text-slate-400">حجز فنادق ومنتجعات</li>
+            <li class="text-slate-400">برامج سياحية متكاملة</li>
+            <li class="text-slate-400">تأجير سيارات</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-6 border-r-4 border-orange-500 pr-4">اتصل بنا</h4>
+          <div class="space-y-4 text-slate-400">
+            <p class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-orange-500"></i> الرياض، المملكة العربية السعودية</p>
+            <p class="flex items-center gap-3"><i class="fas fa-phone text-orange-500"></i> +966 11 123 4567</p>
+            <p class="flex items-center gap-3"><i class="fas fa-envelope text-orange-500"></i> info@beautifulholiday.com</p>
+            <p class="flex items-center gap-3"><i class="fas fa-clock text-orange-500"></i> الأحد - الخميس: 8 ص - 6 م</p>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>جميع الحقوق محفوظة &copy; 2024 العطلة الجميلة للسفر والسياحة | Beautiful Holiday Travel & Tourism</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    // --- Data ---
+    const DESTINATIONS = [
+      { id: 'jp', name: 'اليابان', category: 'asia', description: 'اكتشف الثقافة اليابانية الفريدة، من معابد كيوتو إلى أضواء طوكيو الحديثة. استمتع بالطعام الشهير والطبيعة الخلابة في رحاب بلاد الشمس المشرقة.', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80', icon: 'fa-torii-gate' },
+      { id: 'th', name: 'تايلاند', category: 'asia', description: 'استمتع بشواطئ تايلاند الذهبية، وجزرها الاستوائية، وثقافتها الغنية. وجهة مثالية لمحبي الطبيعة والمغامرة والهدوء النفسي.', image: 'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&w=1200&q=80', icon: 'fa-umbrella-beach' },
+      { id: 'ae', name: 'الإمارات', category: 'asia', description: 'تجمع بين الحداثة والتقليد. استمتع بمشاهدة ناطحات السحاب في دبي والتراث الثقافي العريق في قلب الصحراء العربية المتطورة.', image: 'https://images.unsplash.com/photo-1519690889869-e705e59f72e1?auto=format&fit=crop&w=1200&q=80', icon: 'fa-mosque' },
+      { id: 'fr', name: 'فرنسا', category: 'europe', description: 'زيارة برج إيفل ومتحف اللوفر والريفيرا الفرنسية. استمتع بالأجواء الرومانسية والمطبخ الفرنسي العالمي وتجول في شوارع باريس التاريخية.', image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=1200&q=80', icon: 'fa-landmark' },
+      { id: 'it', name: 'إيطاليا', category: 'europe', description: 'استمتع بالتاريخ العريق في روما والقنوات المائية في البندقية، والمطبخ الإيطالي الشهير عالمياً والموضة الراقية في ميلانو.', image: 'https://images.unsplash.com/photo-1513628253939-010e64ac66cd?auto=format&fit=crop&w=1200&q=80', icon: 'fa-pizza-slice' },
+      { id: 'ch', name: 'سويسرا', category: 'europe', description: 'تشتهر بجبال الألب الخلابة والبحيرات الصافية. وجهة مثالية لمحبي الطبيعة والتزلج والهدوء المطلق والرفاهية السويسرية.', image: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80', icon: 'fa-mountain' },
+      { id: 'us', name: 'الولايات المتحدة', category: 'america', description: 'من نيويورك إلى لوس أنجلوس، اكتشف تنوع الثقافة الأمريكية والمتنزهات الوطنية والمعالم الشهيرة ومدن الملاهي العالمية.', image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80', icon: 'fa-university' },
+      { id: 'ca', name: 'كندا', category: 'america', description: 'استمتع بالطبيعة البكر والبحيرات الصافية والحدائق الوطنية الشاسعة. وجهة مثالية لمحبي الهواء الطلق والمغامرات الجليدية.', image: 'https://images.unsplash.com/photo-1519925610903-381054cc2a1c?auto=format&fit=crop&w=1200&q=80', icon: 'fa-tree' },
+      { id: 'br', name: 'البرازيل', category: 'america', description: 'استمتع بشواطئ ريو دي جانيرو وغابات الأمازون المطيرة والثقافة البرازيلية النابضة بالحياة والمهرجانات السنوية الكبرى.', image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80', icon: 'fa-globe-americas' },
+      { id: 'my', name: 'ماليزيا', category: 'popular', description: 'مزيج رائع من الحداثة والتراث في شرق آسيا، وتجربة تسوق لا تضاهى.', image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80', icon: 'fa-star' },
+      { id: 'tr', name: 'تركيا', category: 'popular', description: 'حيث يلتقي الشرق والغرب في تناغم فريد، مع الطبيعة الساحرة والمواقع التاريخية.', image: 'https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&fit=crop&w=1200&q=80', icon: 'fa-star' },
+      { id: 'es', name: 'إسبانيا', category: 'popular', description: 'الشمس والثقافة والتراث الأندلسي العريق، مع أشهى المأكولات المتوسطية.', image: 'https://images.unsplash.com/photo-1569949381669-ecf31b5f558b?auto=format&fit=crop&w=1200&q=80', icon: 'fa-star' },
+      { id: 'eg', name: 'مصر', category: 'popular', description: 'أرض الفراعنة والتاريخ الذي يمتد لآلاف السنين مع شواطئ البحر الأحمر الخلابة.', image: 'https://images.unsplash.com/photo-1550340499-a6c60fc8287c?auto=format&fit=crop&w=1200&q=80', icon: 'fa-star' }
+    ];
+
+    const GALLERY_ITEMS = [
+      { id: 1, title: 'الطبيعة الجبلية', description: 'مناظر الجبال الخلابة', image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80' },
+      { id: 2, title: 'الشواطئ الذهبية', description: 'استرخ على أفضل الشواطئ', image: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80' },
+      { id: 3, title: 'المدن العالمية', description: 'اكتشف حيوية المدن الكبرى', image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80' },
+      { id: 4, title: 'المغامرات', description: 'تجارب مغامرة لا تنسى', image: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80' }
+    ];
+
+    // --- Rendering Logic ---
+
+    function createBannerCard(dest) {
+      return `
+        <div class="banner-card bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row-reverse w-full max-w-6xl mx-auto border border-white/20">
+          <div class="md:w-1/2 lg:w-3/5 h-64 md:h-auto overflow-hidden">
+            <img src="${dest.image}" alt="${dest.name}" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" />
+          </div>
+          <div class="md:w-1/2 lg:w-2/5 p-8 md:p-12 flex flex-col justify-center space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 shadow-sm">
+                <i class="fas ${dest.icon} text-xl"></i>
+              </div>
+              <h3 class="text-3xl font-black text-slate-800">${dest.name}</h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-lg">${dest.description}</p>
+            <div class="pt-6">
+              <button class="px-8 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all flex items-center gap-2 group shadow-lg shadow-blue-200">
+                احجز رحلتك الآن 
+                <i class="fas fa-plane-departure group-hover:translate-x-[-5px] transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderSections() {
+      const container = document.getElementById('destinations-container');
+      const sections = [
+        { 
+          id: 'asia', 
+          title: 'الدول الآسيوية', 
+          subtitle: 'سحر الشرق والتقاليد العريقة', 
+          category: 'asia', 
+          color: 'bg-gradient-to-br from-cyan-50 via-white to-cyan-50' 
+        },
+        { 
+          id: 'europe', 
+          title: 'الدول الأوروبية', 
+          subtitle: 'حضارة التاريخ وفن العمارة', 
+          category: 'europe', 
+          color: 'bg-gradient-to-br from-indigo-50 via-white to-indigo-50' 
+        },
+        { 
+          id: 'america', 
+          title: 'الدول الأمريكية', 
+          subtitle: 'عالم من التنوع والمغامرة', 
+          category: 'america', 
+          color: 'bg-gradient-to-br from-orange-50 via-white to-orange-50' 
+        },
+      ];
+
+      sections.forEach(sec => {
+        const sectionHtml = `
+          <section id="${sec.id}" class="py-24 ${sec.color} border-t border-slate-100">
+            <div class="container mx-auto px-6">
+              <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl md:text-6xl font-black text-blue-900 drop-shadow-sm">${sec.title}</h2>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto font-medium">${sec.subtitle}</p>
+                <div class="w-32 h-2 bg-orange-400 mx-auto rounded-full shadow-sm"></div>
+              </div>
+              <div class="flex flex-col gap-16">
+                ${DESTINATIONS.filter(d => d.category === sec.category).map(d => createBannerCard(d)).join('')}
+              </div>
+            </div>
+          </section>
+        `;
+        container.innerHTML += sectionHtml;
+      });
+    }
+
+    function renderPopular() {
+      const grid = document.getElementById('popular-grid');
+      const popularHtml = DESTINATIONS.filter(d => d.category === 'popular').map(dest => createBannerCard(dest)).join('');
+      grid.innerHTML = popularHtml;
+    }
+
+    function renderGallery() {
+      const grid = document.getElementById('gallery-grid');
+      const galleryHtml = GALLERY_ITEMS.map(item => `
+        <div class="relative h-72 rounded-3xl overflow-hidden cursor-pointer group shadow-lg gallery-trigger" 
+             data-id="${item.id}">
+          <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+            <h4 class="text-white font-bold text-xl">${item.title}</h4>
+            <p class="text-white/80 text-sm">${item.description}</p>
+          </div>
+        </div>
+      `).join('');
+      grid.innerHTML = galleryHtml;
+
+      // Event listeners for gallery
+      document.querySelectorAll('.gallery-trigger').forEach(el => {
+        el.onclick = () => {
+          const id = parseInt(el.getAttribute('data-id'));
+          const item = GALLERY_ITEMS.find(i => i.id === id);
+          openModal(item);
+        };
+      });
+    }
+
+    // --- Modal Logic ---
+    function openModal(item) {
+      const modal = document.getElementById('gallery-modal');
+      const img = document.getElementById('modal-img');
+      const title = document.getElementById('modal-title');
+      const desc = document.getElementById('modal-desc');
+
+      img.src = item.image;
+      title.innerText = item.title;
+      desc.innerText = item.description;
+
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.add('opacity-100'), 10);
+    }
+
+    document.getElementById('close-modal').onclick = () => {
+      const modal = document.getElementById('gallery-modal');
+      modal.classList.remove('opacity-100');
+      setTimeout(() => modal.classList.add('hidden'), 300);
+    };
+
+    // --- Header Scroll Logic ---
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      const logoIcon = document.getElementById('logo-icon');
+      const logoPrimary = document.getElementById('logo-text-primary');
+      const logoSecondary = document.getElementById('logo-text-secondary');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const menuBtn = document.getElementById('mobile-menu-btn');
+
+      if (window.scrollY > 50) {
+        header.classList.replace('bg-transparent', 'bg-white/95');
+        header.classList.add('backdrop-blur-xl', 'shadow-xl', 'py-2');
+        header.classList.remove('py-4');
+        logoIcon.classList.replace('bg-white/20', 'bg-blue-600');
+        logoIcon.classList.replace('border-white/30', 'border-blue-500');
+        logoPrimary.classList.replace('text-white', 'text-blue-700');
+        logoSecondary.classList.replace('text-white/80', 'text-slate-500');
+        menuBtn.classList.replace('text-white', 'text-slate-800');
+        navLinks.forEach(l => l.classList.replace('text-white', 'text-slate-700'));
+      } else {
+        header.classList.replace('bg-white/95', 'bg-transparent');
+        header.classList.remove('backdrop-blur-xl', 'shadow-xl', 'py-2');
+        header.classList.add('py-4');
+        logoIcon.classList.replace('bg-blue-600', 'bg-white/20');
+        logoIcon.classList.replace('border-blue-500', 'border-white/30');
+        logoPrimary.classList.replace('text-blue-700', 'text-white');
+        logoSecondary.classList.replace('text-slate-500', 'text-white/80');
+        menuBtn.classList.replace('text-slate-800', 'text-white');
+        navLinks.forEach(l => l.classList.replace('text-slate-700', 'text-white'));
+      }
+    });
+
+    // --- Mobile Menu Toggle ---
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.onclick = () => {
+      const isOpen = mobileMenu.style.maxHeight !== '0px' && mobileMenu.style.maxHeight !== '';
+      mobileMenu.style.maxHeight = isOpen ? '0' : '500px';
+      menuBtn.innerHTML = isOpen ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+    };
+
+    document.querySelectorAll('.mobile-nav-link').forEach(l => {
+      l.onclick = () => {
+        mobileMenu.style.maxHeight = '0';
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      };
+    });
+
+    // --- Hero Animations ---
+    window.onload = () => {
+      document.getElementById('hero-title').classList.remove('opacity-0', 'translate-y-10');
+      document.getElementById('hero-desc').classList.remove('opacity-0', 'translate-y-10');
+      document.getElementById('hero-btns').classList.remove('opacity-0', 'translate-y-10');
+    };
+
+    // --- Init ---
+    renderSections();
+    renderPopular();
+    renderGallery();
+  </script>
+</body>
+</html>
